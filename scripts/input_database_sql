@@ -1,0 +1,59 @@
+/*
+=============================================================
+Create Database and Schemas
+=============================================================
+
+EN:
+This script initializes the DataWarehouse environment in SQL Server.
+It checks whether the 'DataWarehouse' database already exists. If it does,
+the database will be dropped and recreated. After that, the script creates
+three schemas used in the Medallion Architecture: 'bronze', 'silver', and 'gold'.
+
+ID:
+Script ini digunakan untuk menyiapkan environment DataWarehouse di SQL Server.
+Script akan memeriksa apakah database 'DataWarehouse' sudah ada. Jika sudah ada,
+database tersebut akan dihapus dan dibuat ulang. Setelah itu, script akan membuat
+tiga schema yang digunakan dalam Arsitektur Medallion, yaitu 'bronze', 'silver', dan 'gold'.
+
+-------------------------------------------------------------
+WARNING | PERINGATAN
+-------------------------------------------------------------
+
+EN:
+Running this script will permanently delete the entire 'DataWarehouse' database
+if it already exists. All stored data will be lost. Make sure you have a proper
+backup before executing this script.
+
+ID:
+Menjalankan script ini akan menghapus seluruh database 'DataWarehouse' secara permanen
+jika database tersebut sudah ada. Semua data yang tersimpan akan hilang. Pastikan
+Anda sudah memiliki backup yang sesuai sebelum menjalankan script ini.
+*/
+
+USE master;
+GO
+
+-- Drop and recreate the 'DataWarehouse' database
+IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
+BEGIN
+    ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE DataWarehouse;
+END;
+GO
+
+-- Create the 'DataWarehouse' database
+CREATE DATABASE DataWarehouse;
+GO
+
+USE DataWarehouse;
+GO
+
+-- Create Schemas
+CREATE SCHEMA bronze;
+GO
+
+CREATE SCHEMA silver;
+GO
+
+CREATE SCHEMA gold;
+GO
