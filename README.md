@@ -1,94 +1,94 @@
----
-# README English Version
----
 # Data Warehouse and Analytics Project
 
-Welcome to the **Data Warehouse and Analytics Project** repository.  
-This project demonstrates the implementation of a **modern data warehouse** using **SQL Server**, covering the full workflow from data integration to analytics in order to generate insights that support business decision-making. It is also designed as a portfolio project to showcase practical skills in **data engineering** and **data analytics**.
+**EN:** A modern SQL Server-based data warehouse project designed to integrate, transform, and model data for analytics and business reporting.  
+**ID:** Proyek data warehouse modern berbasis SQL Server yang dirancang untuk mengintegrasikan, mentransformasi, dan memodelkan data untuk kebutuhan analisis dan pelaporan bisnis.
 
 ---
 
-## Project Overview
+## Project Summary
 
-This project focuses on building a centralized data warehouse that integrates data from multiple source systems. The workflow includes:
-
-- Extracting data from source systems
-- Cleaning and transforming raw data
-- Designing analytical data models
-- Creating SQL-based analysis and reporting
-
-The final output is a business-ready data model that can be used for reporting, dashboards, and analytical purposes.
+**EN:** This project demonstrates an end-to-end data warehousing workflow, starting from raw data ingestion to business-ready analytical datasets. It applies industry-relevant practices in data engineering, ETL development, and analytical modeling.  
+**ID:** Proyek ini menunjukkan alur kerja data warehouse secara end-to-end, mulai dari pemuatan data mentah hingga menjadi dataset analitis yang siap digunakan. Proyek ini menerapkan praktik yang relevan dalam data engineering, pengembangan ETL, dan pemodelan analitis.
 
 ---
 
-## Data Architecture
+## Architecture
 
-This project follows the **Medallion Architecture**, which is divided into three main layers:
+**EN:** The warehouse is built using the Medallion Architecture with three layers: Bronze, Silver, and Gold.  
+**ID:** Data warehouse ini dibangun menggunakan Arsitektur Medallion dengan tiga lapisan: Bronze, Silver, dan Gold.
 
-### Bronze Layer
-This layer stores raw data from source systems in its original form. Data is loaded from CSV files into SQL Server with minimal modification.
+- **Bronze**  
+  **EN:** Stores raw data from source systems.  
+  **ID:** Menyimpan data mentah dari sistem sumber.
 
-### Silver Layer
-This layer is responsible for data cleansing, standardization, and normalization to improve data quality and consistency.
+- **Silver**  
+  **EN:** Cleans, standardizes, and transforms the data.  
+  **ID:** Membersihkan, menstandarisasi, dan mentransformasi data.
 
-### Gold Layer
-This layer contains processed and business-ready data models prepared for reporting, dashboarding, and analytics.
-
----
-
-## Project Scope
-
-The scope of this project includes:
-
-1. **Data Architecture Design**  
-   Building a modern layered data warehouse using the Bronze, Silver, and Gold approach.
-
-2. **ETL Pipelines**  
-   Extracting, transforming, and loading data from source systems into the warehouse.
-
-3. **Data Modeling**  
-   Developing **fact tables** and **dimension tables** optimized for analytical queries.
-
-4. **Analytics and Reporting**  
-   Creating SQL-based analysis and reports to deliver actionable insights for stakeholders.
+- **Gold**  
+  **EN:** Provides business-ready data models for reporting and analytics.  
+  **ID:** Menyediakan model data siap pakai untuk pelaporan dan analisis.
 
 ---
 
-## Project Objective
+## Tech Stack
 
-The main objective of this project is to build a modern data warehouse using SQL Server to consolidate sales data from multiple sources for more effective reporting and analysis.
+- **Database:** SQL Server Express  
+- **Query Tool:** SQL Server Management Studio (SSMS)  
+- **Design Tool:** Draw.io  
+- **Version Control:** GitHub  
 
-More specifically, the project aims to:
+---
 
-- Import data from two source systems: **ERP** and **CRM**
-- Clean and resolve data quality issues before analysis
-- Combine the data into an integrated and user-friendly analytical model
-- Provide clear documentation to support both business and analytics needs
+## Key Features
 
-> Note: This project focuses only on the latest dataset and does not include historical data tracking.
+- **EN:** Build ETL pipelines from ERP and CRM source systems  
+  **ID:** Membangun pipeline ETL dari sistem sumber ERP dan CRM
+
+- **EN:** Transform raw data into clean and structured analytical datasets  
+  **ID:** Mengubah data mentah menjadi dataset analitis yang bersih dan terstruktur
+
+- **EN:** Design fact tables and dimension tables for analytical querying  
+  **ID:** Merancang fact table dan dimension table untuk kebutuhan query analitis
+
+- **EN:** Generate SQL-based reports for business insight generation  
+  **ID:** Menghasilkan laporan berbasis SQL untuk menghasilkan insight bisnis
+
+- **EN:** Analyze customer behavior, product performance, and sales trends  
+  **ID:** Menganalisis perilaku pelanggan, kinerja produk, dan tren penjualan
+
+---
+
+## Project Workflow
+
+**EN:** The workflow of this project can be summarized as follows:  
+**ID:** Alur kerja proyek ini dapat diringkas sebagai berikut:
+
+1. **EN:** Extract raw data from ERP and CRM source files  
+   **ID:** Mengambil data mentah dari file sumber ERP dan CRM
+
+2. **EN:** Load raw data into the Bronze layer  
+   **ID:** Memuat data mentah ke lapisan Bronze
+
+3. **EN:** Clean and transform data in the Silver layer  
+   **ID:** Membersihkan dan mentransformasi data di lapisan Silver
+
+4. **EN:** Build analytical models in the Gold layer  
+   **ID:** Membangun model analitis di lapisan Gold
+
+5. **EN:** Perform SQL-based analysis and reporting  
+   **ID:** Melakukan analisis dan pelaporan berbasis SQL
 
 ---
 
 ## Analytics Focus
 
-The analytical focus of this project is centered on three key areas:
+**EN:** This project focuses on three main analytical areas:  
+**ID:** Proyek ini berfokus pada tiga area analisis utama:
 
-- **Customer Behavior**
-- **Product Performance**
+- **Customer Behavior**  
+- **Product Performance**  
 - **Sales Trends**
-
-Through SQL-based analytics, this project aims to generate insights that support business evaluation and better decision-making.
-
----
-
-## Tools Used
-
-The main tools used in this project include:
-
-- **SQL Server Express** — database engine for storing and managing data
-- **SQL Server Management Studio (SSMS)** — tool for database management and query execution
-- **Draw.io** — for designing architecture diagrams, data flows, and data models
-- **GitHub** — for version control and project documentation
 
 ---
 
@@ -96,180 +96,27 @@ The main tools used in this project include:
 
 ```bash
 data-warehouse-project/
-│
-├── datasets/                           # Raw datasets from ERP and CRM systems
-│
-├── docs/                               # Project documentation and architecture files
-│   ├── etl.drawio
-│   ├── data_architecture.drawio
-│   ├── data_catalog.md
-│   ├── data_flow.drawio
-│   ├── data_models.drawio
-│   ├── naming-conventions.md
-│
-├── scripts/                            # SQL scripts for ETL and transformations
+├── datasets/          # Raw datasets from ERP and CRM
+├── docs/              # Documentation and architecture files
+├── scripts/           # SQL scripts for ETL and transformations
 │   ├── bronze/
 │   ├── silver/
-│   ├── gold/
-│
-├── tests/                              # Testing and data quality validation files
-│
+│   └── gold/
+├── tests/             # Testing and validation files
 ├── README.md
-├── LICENSE
-├── .gitignore
-└── requirements.txt
+└── LICENSE
 ```
+
+---
+
 ## Portfolio Value
 
-This project is well-suited for showcasing skills in:
+**EN:** This project highlights practical skills in SQL Development, Data Engineering, ETL Pipeline Development, Data Modeling, and Data Analytics. It also demonstrates an end-to-end understanding of how raw data is transformed into actionable business insights.  
+**ID:** Proyek ini menampilkan kemampuan praktis dalam SQL Development, Data Engineering, ETL Pipeline Development, Data Modeling, dan Data Analytics. Selain itu, proyek ini juga menunjukkan pemahaman end-to-end tentang bagaimana data mentah diolah menjadi insight bisnis yang dapat digunakan.
 
-- SQL Development
-- Data Engineering
-- ETL Pipeline Development
-- Data Modeling
-- Data Analytics
-
-In addition to technical ability, it also demonstrates an end-to-end understanding of how raw data is transformed into meaningful business insights.
+---
 
 ## License
 
-This project is licensed under the MIT License, which allows the project to be used, modified, and shared with proper attribution.
-
----
-# README Versi Indonesia
----
-# SQL_Data_Warehouse_Project
-
-Selamat datang di repository **Proyek Data Warehouse dan Analitik**.  
-Proyek ini menampilkan implementasi **data warehouse modern** menggunakan **SQL Server**, mulai dari proses integrasi data hingga analisis untuk menghasilkan insight yang mendukung pengambilan keputusan bisnis. Proyek ini juga dirancang sebagai portofolio untuk menunjukkan penerapan praktik yang umum digunakan dalam **data engineering** dan **data analytics**.
-
----
-
-## Gambaran Umum Proyek
-
-Proyek ini berfokus pada pembangunan data warehouse yang mampu mengintegrasikan data dari berbagai sumber ke dalam satu sistem terpusat. Proses yang dibangun mencakup:
-
-- Pengambilan data dari sistem sumber
-- Pembersihan dan transformasi data
-- Pemodelan data untuk kebutuhan analitis
-- Pembuatan analisis dan laporan berbasis SQL
-
-Hasil akhirnya adalah model data yang siap digunakan untuk kebutuhan pelaporan, dashboard, dan analisis bisnis.
-
----
-
-## Arsitektur Data
-
-Proyek ini menggunakan pendekatan **Medallion Architecture** yang terdiri dari tiga lapisan utama:
-
-### Bronze Layer
-Lapisan ini menyimpan data mentah dari sistem sumber dalam bentuk aslinya. Data diimpor dari file CSV ke dalam SQL Server tanpa banyak perubahan.
-
-### Silver Layer
-Lapisan ini digunakan untuk proses pembersihan, standarisasi, dan normalisasi data agar kualitas data menjadi lebih baik dan konsisten.
-
-### Gold Layer
-Lapisan ini berisi data yang telah diproses dan dimodelkan agar siap digunakan untuk pelaporan, dashboard, dan analisis bisnis.
-
----
-
-## Cakupan Proyek
-
-Ruang lingkup proyek ini meliputi:
-
-1. **Perancangan Arsitektur Data**  
-   Membangun data warehouse modern dengan struktur berlapis menggunakan pendekatan Bronze, Silver, dan Gold.
-
-2. **Pipeline ETL**  
-   Mengekstrak, mentransformasi, dan memuat data dari sistem sumber ke dalam data warehouse.
-
-3. **Pemodelan Data**  
-   Mengembangkan **fact table** dan **dimension table** yang dioptimalkan untuk kebutuhan query analitis.
-
-4. **Analitik dan Pelaporan**  
-   Membuat analisis serta laporan berbasis SQL untuk menghasilkan insight yang dapat digunakan oleh stakeholder.
-
----
-
-## Tujuan Proyek
-
-Tujuan utama proyek ini adalah membangun data warehouse modern menggunakan SQL Server untuk mengonsolidasikan data penjualan dari beberapa sumber agar dapat digunakan untuk analisis dan pelaporan secara lebih efektif.
-
-Secara khusus, proyek ini bertujuan untuk:
-
-- Mengimpor data dari dua sistem sumber, yaitu **ERP** dan **CRM**
-- Membersihkan dan memperbaiki kualitas data sebelum analisis
-- Menggabungkan data ke dalam model data yang terintegrasi dan mudah digunakan
-- Menyediakan dokumentasi yang jelas untuk mendukung kebutuhan bisnis dan analitik
-
-> Catatan: Proyek ini berfokus pada dataset terbaru dan tidak mencakup historisasi data.
-
----
-
-## Fokus Analisis
-
-Analisis dalam proyek ini difokuskan pada tiga area utama:
-
-- **Perilaku Pelanggan**
-- **Kinerja Produk**
-- **Tren Penjualan**
-
-Melalui analisis berbasis SQL, proyek ini bertujuan menghasilkan insight yang dapat membantu proses evaluasi bisnis dan pengambilan keputusan yang lebih tepat.
-
----
-
-## Tools yang Digunakan
-
-Beberapa tools yang digunakan dalam proyek ini antara lain:
-
-- **SQL Server Express** — database engine untuk menyimpan dan mengelola data
-- **SQL Server Management Studio (SSMS)** — tool untuk pengelolaan database dan eksekusi query
-- **Draw.io** — untuk membuat diagram arsitektur, alur data, dan model data
-- **GitHub** — untuk version control dan dokumentasi project
-
----
-
-## Struktur Repository
-
-```bash
-data-warehouse-project/
-│
-├── datasets/                           # Dataset mentah dari sistem ERP dan CRM
-│
-├── docs/                               # Dokumentasi proyek dan arsitektur
-│   ├── etl.drawio
-│   ├── data_architecture.drawio
-│   ├── data_catalog.md
-│   ├── data_flow.drawio
-│   ├── data_models.drawio
-│   ├── naming-conventions.md
-│
-├── scripts/                            # Script SQL untuk ETL dan transformasi
-│   ├── bronze/
-│   ├── silver/
-│   ├── gold/
-│
-├── tests/                              # File pengujian dan validasi kualitas data
-│
-├── README.md
-├── LICENSE
-├── .gitignore
-└── requirements.txt
-```
----
-## Nilai Portofolio
-
-Proyek ini dapat digunakan untuk menunjukkan kemampuan dalam bidang:
-
-- SQL Development
-- Data Engineering
-- ETL Pipeline Development
-- Data Modeling
-- Data Analytics
-
-Selain kemampuan teknis, proyek ini juga menunjukkan pemahaman menyeluruh terhadap alur data, mulai dari data mentah hingga menjadi insight yang siap digunakan.
-
----
-## Lisensi
-
-Project ini menggunakan lisensi MIT, sehingga dapat digunakan, dimodifikasi, dan dibagikan dengan tetap mencantumkan atribusi yang sesuai.
+**EN:** This project is licensed under the MIT License.  
+**ID:** Proyek ini menggunakan Lisensi MIT.
