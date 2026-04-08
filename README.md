@@ -102,7 +102,6 @@ data-warehouse-project/
 │   ├── bronze/
 │   ├── silver/
 │   └── gold/
-├── tests/             # Testing and validation files
 ├── README.md
 └── LICENSE
 ```
